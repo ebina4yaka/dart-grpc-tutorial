@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "net.ebina4yaka.dart-grpc-tutorial.pokemon";
+option java_outer_classname = "PokemonProto";
+option objc_class_prefix = "HLW";
+
+package pokemon;
+
+message PokeQuery {
+  int32 indexNo = 1;
+  int32 formType = 2;
+}
+
+message Pokemon {
+  int32 indexNo = 1;
+  int32 formType = 2;
+  string formName = 3;
+  string name = 4;
+  string type1 = 5;
+  string type2 = 6;
+  string ability1 = 7;
+  string ability2 = 8;
+  string hiddenAbility = 9;
+  int32 hp = 10;
+  int32 attack = 11;
+  int32 defence = 12;
+  int32 specialAttack = 13;
+  int32 specialDefence = 14;
+  int32 speed = 15;
+}
+
+service PokemonService {
+  rpc GetPokemon(PokeQuery) returns (Pokemon) {}
+}
