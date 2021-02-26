@@ -3,7 +3,7 @@ description: Dart gRPC sample client and server.
 publish_to: none
 
 environment:
-  sdk: ">=2.10.0"
+  sdk: ">=2.13.0-59.0.dev"
 
 dependencies:
   async: ^2.2.0
